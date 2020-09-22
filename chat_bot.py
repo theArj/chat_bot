@@ -17,8 +17,8 @@ def get_bot_response(user_response):
                            "Aww, you're sweet! So, are you gonna ask me my real name, or are you gonna sit there all nervous, trying not to blow it? ", "You're cute! Do you like me? ", "You're adorable! How much do you like me? "]
     bot_response_blush = [
         "Congratulations, hot stuff! You finally made me blush! Type 'done' and I'm yours! ;) "]
-    bot_response_unhappy = ["Then, come back when you grow a pair. Wanna keep trying? ", "Then, buzz off and find yourself another digital girlfriend! Type 'fin' so you can make like a tree and leave! ",
-                            "Yeah, I'm gonna go. Come back after taking some flirting lessons. Type 'adios', so you can take a hike. ", "No, I don't want no scrub! I'm giving you one more chance. Are you better than that? "]
+    bot_response_unhappy = ["Then, come back when you grow a pair. Wanna keep trying? ", "Then, buzz off and find yourself another digital girlfriend! Type 'done' so you can make like a tree and leave! ",
+                            "Yeah, I'm gonna go. Come back after taking some flirting lessons. Type 'done', so you can take a hike. ", "No, I don't want no scrub! I'm giving you one more chance. Are you better than that? "]
     bot_response_sassy = ["Wow! Nice try! Does that work on other bots, too? ", "You'll have to do better than that! Wanna keep trying, tiger? ;) ",
                           "Is that the best you can do? ", "Looks like someone needs some flirting lessons! ;) Wanna keep trying Rico Suave? "]
     bot_response_name = [
@@ -28,32 +28,32 @@ def get_bot_response(user_response):
     bot_response_bored = ["Aargh! Small talk is so BORING! Can't you tell I'm here to flirt with you? ",
                           "My plumber can carry a more interesting conversation than you. Wanna keep trying? "]
     bot_response_last = [
-        "Well, you tried... unsuccessfully. But it's the effort that counts, right? Bye! :/"]
+        "Well, you tried... unsuccessfully. But it's the effort that counts, right? Type 'done' so you can take a long walk off a short pier! Bye! :/ "]
 
 # Use conditionals to decide which of the response lists to select from. For example: if a user entered “sad”, my program would choose a reponse from the of sad response list. If a user entered “happy”, my program would choose a reponse from the of happy response list.
 # Use choice() to randomly select one of the three responses. (See example from class.)
-
-    if user_response == "Yes":
+    user_response = user_response.lower()
+    if user_response == "yes":
         return choice(bot_response_flirty)
-    elif user_response == "No":
+    elif user_response == "no":
         return choice(bot_response_unhappy)
-    elif user_response == "I'm not interested.":
+    elif user_response == "i'm not interested.":
         return choice(bot_response_sassy)
-    elif user_response == "What's your name?":
+    elif user_response == "what's your name?":
         return choice(bot_response_name)
-    elif user_response == "Will you go out with me?":
+    elif user_response == "will you go out with me?":
         return choice(bot_response_unsure)
-    elif user_response == "I like you.":
+    elif user_response == "i like you.":
         return choice(bot_response_blush)
-    elif user_response == "How are you?":
+    elif user_response == "how are you?":
         return choice(bot_response_bored)
-    elif user_response == "A lot":
+    elif user_response == "a lot":
         return choice(bot_response_blush)
-    elif user_response == "A little":
+    elif user_response == "a little":
         return choice(bot_response_sassy)
-    elif user_response == "Not much":
+    elif user_response == "not much":
         return choice(bot_response_unhappy)
-    elif user_response == "I don't like you":
+    elif user_response == "i don't like you":
         return choice(bot_response_unhappy)
     else:
         return choice(bot_response_last)
