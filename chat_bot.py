@@ -6,6 +6,7 @@ from random import choice
 
 # It should have 1 parameter called user_response, which is a string with the users input.
 
+
 def get_bot_response(user_response):
 
     # It should return a string with the chat bot’s response.
@@ -57,6 +58,7 @@ def get_bot_response(user_response):
     else:
         return choice(bot_response_last)
 
+
 # Greet the user using print() statements and explain what the chat bot topic is and what kind of responses it expects.
 print("Welcome to FlirtBot 2020! I'm your digital flirtmate!")
 
@@ -68,11 +70,9 @@ user_response = ""
 
 # Use a while() loop to keep running your chat bot until the user enters "done".
 
+bot_response = "Think you have what it takes to make me blush? ;) "
 while True:
-    user_response = input(
-        "Think you have what it takes to make me blush? ;) ")
+    user_response = input(bot_response)
     if user_response == 'done':
         break
-
     bot_response = get_bot_response(user_response)
-print(bot_response)
